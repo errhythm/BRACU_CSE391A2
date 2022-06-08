@@ -8,8 +8,8 @@ function fetchQuote() {
             document.getElementById("quote_text").innerHTML = '"' + data.content + '"';
             document.getElementById("quote_author").innerHTML = data.author;
 
-        }).catch(err => console.log(err));
-
+        }).catch(err => console.log(err));   
+        
         document.getElementById("quotes").style.backgroundColor = "#aebab1";
         document.getElementById("quotes").style.borderColor = "#5d767b";
         document.getElementById("quote_text").style.color = "#fff";
