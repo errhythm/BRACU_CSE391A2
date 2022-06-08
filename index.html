@@ -5,6 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Montserrat&family=Tiro+Tamil&family=Ubuntu&display=swap" rel="stylesheet">
     <title>CSE391 Assignment 2</title>
 </head>
 <body>
@@ -24,11 +27,19 @@
     <div class="sectiontitle">
         <h1>Quote Box</h1>
     </div>
-    <div class="quotes">
-        <div class="quotesvg"><i class="fa-solid fa-quote-right"></i></div>
-        <div id="quote_text">"If you're not a good shot today, don't worry. There are other ways to be useful."</div>
-        <div id="quote_author">Sova</div>
+    <div class="quotes" id="quotes">
+        <div class="quotesvg"><i class="fa-solid fa-quote-right" id="quote_icon"></i></div>
+        <div id="quote_text">Loading...</div>
+        <div id="quote_author">Please wait</div>
     </div>
+    <div class="quotebutton">
+        <button onclick="red()" type="button" id="red-button"><i class="fa-solid fa-circle"></i></button>
+        <button onclick="blue()" type="button" id="blue-button"><i class="fa-solid fa-circle"></i></button>
+        <button onclick="yellow()" type="button" id="yellow-button"><i class="fa-solid fa-circle"></i></button>
+        <button onclick="pink()" type="button" id="pink-button"><i class="fa-solid fa-circle"></i></button>
+        <button onclick="fetchQuote()" type="button" id="quote-button"><i class="fa-solid fa-rotate"></i></button>
+    </div>
+    <script src="script.js"></script>
     <script src="https://kit.fontawesome.com/692c2638c1.js" crossorigin="anonymous"></script>  
 </body>
 </html>
