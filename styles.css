@@ -131,10 +131,11 @@ nav{
     border-radius: 25px;
     border-color: #5d767b;
     border-style: solid;
+    height: 35vh;
 }
 #quote_text{
-    padding-left:25%;
-    padding-right:25%;
+    padding-left: 10%;
+    padding-right: 10%;
     font-size:3rem;
     line-height:1.375;
     font-family:Amiri,serif;

@@ -1,6 +1,5 @@
 function fetchQuote() {
-    // let url = "https://api.quotable.io/random?tags=famous-quotes";
-    // Fetch the json from url and parse
+    let url = "https://api.quotable.io/random?maxLength=45&tags=famous-quotes";
     fetch(url)
         .then(response => response.json())
         .then(data => {
@@ -10,8 +9,14 @@ function fetchQuote() {
             document.getElementById("quote_author").innerHTML = data.author;
 
         }).catch(err => console.log(err));
-        
-        
+
+        document.getElementById("quotes").style.backgroundColor = "#aebab1";
+        document.getElementById("quotes").style.borderColor = "#5d767b";
+        document.getElementById("quote_text").style.color = "#fff";
+        document.getElementById("quote_author").style.color = "#fff";
+        document.getElementById("quote_icon").style.color = "#fff";
+        document.getElementById("quote_text").style.fontFamily = "Amiri";
+        document.getElementById("quote_text").style.fontWeight = "serif";        
 }
 fetchQuote();
 
