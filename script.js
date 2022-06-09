@@ -62,3 +62,18 @@ function pink() {
     document.getElementById("quote_text").style.fontFamily = "Ubuntu";
     document.getElementById("quote_text").style.fontWeight = "sans-serif";
 }
+
+function convert(){
+    var input = document.getElementById("converter_input").value;
+    // console.log(input);
+    var unit = document.getElementById("converter_unit").value;
+    // console.log(unit);
+    if (unit == "lbtokg"){
+        var output = input * 0.45359;
+        document.getElementById("converter_result").innerHTML = output + " KG";
+    }
+    else{
+        var output = input * 2.20462;
+        document.getElementById("converter_result").innerHTML = output + " LB";
+    }
+}

@@ -30,7 +30,6 @@
         <div id="quote_text">Loading...</div>
         <div id="quote_author">Please wait</div>
     </div>
-    
     <div class="quotebutton">
         <button onclick="red()" type="button" id="red-button"><i class="fa-solid fa-circle"></i></button>
         <button onclick="blue()" type="button" id="blue-button"><i class="fa-solid fa-circle"></i></button>
@@ -38,6 +37,26 @@
         <button onclick="pink()" type="button" id="pink-button"><i class="fa-solid fa-circle"></i></button>
         <button onclick="fetchQuote()" type="button" id="quote-button"><i class="fa-solid fa-rotate"></i></button>
     </div>
+    <div class="spacing"></div>
+    <div class="sectiontitle">
+        <h1>HERO CONVERTER</h1>
+    </div>
+    <div class="section_container">
+        <div class="hero_converter">
+            <span class="hero_converter_text">Convert: </span><input id="converter_input" type="number">
+            <select name="unit" id="converter_unit">
+                <option value="lbtokg">LB to KG</option>
+                <option value="kgtolb">KG to LB</option>
+            </select>
+            <button onclick="convert()" type="button" id="converter_button">Go</button>
+            <span id="converter_result"></span>
+        </div>
+    </div>
+    <div class="spacing"></div>
+    <div class="sectiontitle">
+        <h1>CALCULATOR</h1>
+    </div>
+    
     <script src="script.js"></script>
     <script src="https://kit.fontawesome.com/692c2638c1.js" crossorigin="anonymous"></script>  
 </body>
