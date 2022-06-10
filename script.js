@@ -131,7 +131,7 @@ function Sum() {
     }
     document.getElementById("sum").innerHTML = sum;
     var average = sum / calculateArray.length;
-    if (isNaN(average) = true){
+    if (isNaN(average) === true){
         average = 0;
     }
     document.getElementById("average").innerHTML = average;
