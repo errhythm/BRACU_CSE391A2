@@ -1,22 +1,28 @@
 function fetchQuote() {
-    let url = "https://api.quotable.io/random?maxLength=45&tags=famous-quotes";
-    fetch(url)
-        .then(response => response.json())
-        .then(data => {
-            console.log(data.content);
-            console.log(data.author);
-            document.getElementById("quote_text").innerHTML = '"' + data.content + '"';
-            document.getElementById("quote_author").innerHTML = data.author;
+    var quotes = ["If you wish to be a writer, write.", 
+    "When you learn, teach. When you get, give.",
+    "Nothing will work unless you do.",
+    "You're never a loser until you quit trying.", 
+    "To lead people walk behind them.",
+    "Our intention creates our reality.",
+    "All know the way; few actually walk it.",
+    "He who angers you conquers you.",
+    "Imagination rules the world.",
+    "Never promise more than you can perform."    
+    ];
+    var quotes_author = ["Epictetus", "Maya Angelou", "Maya Angelou", "Mike Ditka", "Laozi", "Wayne Dyer", "Bodhidharma","Elizabeth Kenny", "Napoleon", "Publilius Syrus"];
 
-        }).catch(err => console.log(err));   
-        
-        document.getElementById("quotes").style.backgroundColor = "#aebab1";
-        document.getElementById("quotes").style.borderColor = "#5d767b";
-        document.getElementById("quote_text").style.color = "#fff";
-        document.getElementById("quote_author").style.color = "#fff";
-        document.getElementById("quote_icon").style.color = "#fff";
-        document.getElementById("quote_text").style.fontFamily = "Amiri";
-        document.getElementById("quote_text").style.fontWeight = "serif";        
+    var random_quote = Math.floor(Math.random() * quotes.length);
+    document.getElementById("quote_text").innerHTML = '"' + quotes[random_quote] + '"';
+    document.getElementById("quote_author").innerHTML = quotes_author[random_quote];
+
+    document.getElementById("quotes").style.backgroundColor = "#aebab1";
+    document.getElementById("quotes").style.borderColor = "#5d767b";
+    document.getElementById("quote_text").style.color = "#fff";
+    document.getElementById("quote_author").style.color = "#fff";
+    document.getElementById("quote_icon").style.color = "#fff";
+    document.getElementById("quote_text").style.fontFamily = "Amiri";
+    document.getElementById("quote_text").style.fontWeight = "serif";        
 }
 fetchQuote();
 
