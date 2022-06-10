@@ -68,7 +68,12 @@ function pink() {
     document.getElementById("quote_text").style.fontFamily = "Ubuntu";
     document.getElementById("quote_text").style.fontWeight = "sans-serif";
 }
-
+const converterinput = document.getElementById("converter_input");
+converterinput.addEventListener("keyup", function(event) {
+    if (event.key === 'Enter') {
+        convert();
+    }
+});
 function convert(){
     var input = document.getElementById("converter_input").value;
     // console.log(input);
@@ -83,3 +88,59 @@ function convert(){
         document.getElementById("converter_result").innerHTML = output + " LB";
     }
 }
+
+// Calculator
+
+const calculatorinput = document.getElementById("calc-value");
+calculatorinput.addEventListener("keyup", function(event) {
+    console.log(event.key)
+    if ((event.key >= 0 && event.key <= 9) || event.key == "Enter"|| event.key == "Backspace" || event.key == "v") { 
+        calc();
+    }
+});
+function calc() {
+    var calcvalue = document.getElementById("calc-value").value;
+    calculateArray = calcvalue.split(',');
+    for (var i = 0; i < calculateArray.length; i++) {
+        calculateArray[i] = calculateArray[i].replace(/[[+-]?^0-9.]/g, '');
+    }
+    calculateArray = calculateArray.filter(n => n);
+    Max();
+    Min();
+    Sum();
+    Reverse();
+}
+function Max() {
+    var maxvalue = Math.max.apply(null, calculateArray);
+    if (maxvalue == "-Infinity"){
+        maxvalue = 0;
+    }
+    document.getElementById("max").innerHTML = maxvalue;
+}
+function Min() {
+    var minvalue = Math.min.apply(null, calculateArray);
+    if (minvalue == "Infinity"){
+        minvalue = 0;
+    }
+    document.getElementById("min").innerHTML = minvalue;
+}
+function Sum() {
+    var sum = 0;
+    for (var i = 0; i < calculateArray.length; i++) {
+        sum += parseFloat(calculateArray[i]);
+    }
+    document.getElementById("sum").innerHTML = sum;
+    var average = sum / calculateArray.length;
+    if (isNaN(average) = true){
+        average = 0;
+    }
+    document.getElementById("average").innerHTML = average;
+}
+function Reverse() {
+    calculateArray.reverse();
+    for (var i = 0; i < calculateArray.length; i++) {
+        calculateArray[i] = ` ${calculateArray[i]}`;
+    }
+    document.getElementById("reverse").innerHTML = calculateArray;
+}
+

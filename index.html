@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Montserrat&family=Montserrat:wght@900&family=Tiro+Tamil&family=Ubuntu&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <title>CSE391 Assignment 2</title>
 </head>
 <body>
@@ -41,8 +42,36 @@
         <h1>CALCULATOR</h1>
     </div>
     <div class="section_container">
-        
+        <div class="calculator">
+            <table id="calc-table">
+                <tr>
+                    <td><span id="calc-input">Input Series of Number:</span></td>
+                    <td><input id="calc-value" type="text"></td>
+                </tr>
+                <tr>
+                    <td><div>Max: </div></td>
+                    <td><div><span id="max">0</span></div></td>
+                </tr>
+                <tr>
+                    <td><div>Min: </div></td>
+                    <td><div><span id="min">0</span></div></td>
+                </tr>
+                <tr>
+                    <td><div>Sum: </div></td>
+                    <td><div><span id="sum">0</span></div></td>
+                </tr>
+                <tr>
+                    <td><div>Average: </div></td>
+                    <td><div><span id="average">0</span></div></td>
+                </tr>
+                <tr>
+                    <td><div>Reverse Order: </div></td>
+                    <td><div><span id="reverse"></span></div></td>
+                </tr>
+            </table>
+        </div>
     </div>
+    <div class="spacing"></div>
     <div class="sectiontitle">
         <h1>QUOTE</h1>
     </div>
