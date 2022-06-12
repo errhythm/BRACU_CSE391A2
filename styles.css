@@ -9,6 +9,23 @@ body{
     color:#0d1b2a;
     background-color:#e0e1dd
 }
+button{
+    box-sizing: border-box;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    color: #0d1b2a;
+    font-size: 1.3rem;
+    letter-spacing: .25rem;
+    background-color: #f1f1f1;
+    outline: none;
+    transition: .4s;
+    cursor: pointer;
+}
 a{
     text-decoration:none;
     color:#2d3436
@@ -94,6 +111,7 @@ nav{
     letter-spacing:.75rem;
     font-weight:900;
     font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
     color:#0d1b2a;
     opacity:.15
 }
@@ -363,4 +381,46 @@ nav{
 #calc-table td:nth-child(even){
     text-align:left;
     padding-left: 0.35em;
+}
+/* magic */
+.magic{
+    display:block;
+    clear:both;
+    height:relative;
+    padding: 5%;
+    border-radius: 25px;
+    text-align: center;
+}
+#magic-input{
+    box-sizing: border-box;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    color: #0d1b2a;
+    font-size: 1.3rem;
+    letter-spacing: .25rem;
+    background-color: #f1f1f1;
+    outline: none;
+    transition: .4s;
+    resize: none;
+    margin-left:auto;
+    margin-right:auto;
+    width: 100%;
+}
+#magic-input::-webkit-scrollbar-track{
+	background-color: #e2e2e2;
+}
+
+#magic-input::-webkit-scrollbar{
+	width: 6px;
+	background-color: #F5F5F5;
+    scroll-behavior:smooth;
+}
+
+#magic-input::-webkit-scrollbar-thumb{
+	background-color: #545454;
 }

@@ -73,6 +73,24 @@
     </div>
     <div class="spacing"></div>
     <div class="sectiontitle">
+        <h1>Magic!</h1>
+    </div>
+    <div class="section_container">
+        <div class="magic">
+            <textarea id="magic-input" type="text" rows="15"></textarea>
+            <div class="magic-button">
+                <button onclick="cleartext()" type="button"">Clear It</button>
+                <button onclick="capitalizetext()" type="button" value="NO" id="capitalize-button">Capitalize</button>
+                <button onclick="sortLines()" type="button">Sort</button>
+                <button onclick="reverseLines()" type="button">Reverse</button>
+                <button onclick="stripBlank()" type="button">Strip Blank</button>
+                <button onclick="addLineNo()" type="button">Add Numbers</button>
+                <button onclick="shuffleLines()" type="button">Shuffle</button>
+            </div>
+        </div>
+    </div>
+    <div class="spacing"></div>
+    <div class="sectiontitle">
         <h1>QUOTE</h1>
     </div>
     <!-- Quotes at the bottom before footer -->
@@ -89,7 +107,12 @@
         <button onclick="fetchQuote()" type="button" id="quote-button"><i class="fa-solid fa-rotate"></i></button>
     </div>
     <div class="spacing"></div>
-    <script src="script.js"></script>
+    <!-- Scripts || Do not touch || -->
+    <script src="script.js"></script> 
     <script src="https://kit.fontawesome.com/692c2638c1.js" crossorigin="anonymous"></script>  
-</body>
+    <script>
+        console.log("WebToken")
+        console.log("eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjb3Vyc2UiOiJjc2UzOTEiLCJhdXRob3IiOiJFaHNhbnVyIFJhaG1hbiBSaHl0aG0iLCJpZCI6MjAxMDEyOTgsIm1lc3NhZ2UiOiJJZiB0aGUgc3VibWl0dGVkIGZpbGUgaWQgZG9lc24ndCBtYXRjaGVzLCBpdCBpcyBtb3N0bHkgcGxhZ2lhcml6ZWQgZnJvbSBteSBHaXRodWIuIGh0dHBzOi8vZ2l0aHViLmNvbS9lcnJoeXRobS9DU0UzOTFBMiJ9.MXxU0i8OoFbsQtTu4eni5Wc-15Xu5OAYKLo4j14ls6E");
+    </script>
+    </body>
 </html>

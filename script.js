@@ -144,3 +144,103 @@ function Reverse() {
     document.getElementById("reverse").innerHTML = calculateArray;
 }
 
+// magic
+
+function cleartext() {
+    document.getElementById("magic-input").value = "";
+    console.log("Cleared Magic TextArea")
+}
+function capitalizetext() {
+    var magicinput = document.getElementById("magic-input").value;
+    if (document.getElementById("capitalize-button").value == "NO"){
+        document.getElementById("magic-input").value = magicinput.toUpperCase();
+        document.getElementById("capitalize-button").value = "YES";
+        console.log("Converted to Uppercase characters!")
+    }
+    else{
+        document.getElementById("magic-input").value = magicinput.toLowerCase();
+        document.getElementById("capitalize-button").value = "NO";
+        console.log("Converted to Lowercase characters!")
+    }
+}
+
+function sortLines() {
+    var magicinput = document.getElementById("magic-input").value;
+    var magicArray = magicinput.split("\n");
+    var newmagicinput = "";
+    magicArray.sort();
+    for (var i = 0; i < magicArray.length; i++) {
+        if(i == magicArray.length-1){
+            newmagicinput += magicArray[i];
+        }
+        else{
+            newmagicinput += magicArray[i]+"\n";
+        }
+        // debugger
+    }
+    document.getElementById("magic-input").value = newmagicinput;
+    console.log("Sorted Lines!")
+}
+function reverseLines() {
+    var magicinput = document.getElementById("magic-input").value;
+    var magicArray = magicinput.split("\n");
+    var newmagicinput = "";
+    magicArray.reverse();
+    for (var i = 0; i < magicArray.length; i++) {
+        if(i == magicArray.length-1){
+            newmagicinput += magicArray[i];
+        }
+        else{
+            newmagicinput += magicArray[i]+"\n";
+        }
+    }
+    document.getElementById("magic-input").value = newmagicinput;
+    console.log("Reversed Lines!")
+}
+function stripBlank(){
+    var magicinput = document.getElementById("magic-input").value;
+    var magicArray = magicinput.split("\n");
+    var newmagicinput = "";
+    magicArray = magicArray.filter(item => item);
+    for (var i = 0; i < magicArray.length; i++) {
+        if(i == magicArray.length-1){
+            newmagicinput += magicArray[i];
+        }
+        else{
+            newmagicinput += magicArray[i]+"\n";
+        }
+    }
+    document.getElementById("magic-input").value = newmagicinput;
+    console.log("Stripped Blank Lines!")
+}
+function addLineNo(){
+    var magicinput = document.getElementById("magic-input").value;
+    var magicArray = magicinput.split("\n");
+    var newmagicinput = "";
+    for (var i = 0; i < magicArray.length; i++) {
+        if(i == magicArray.length-1){
+            newmagicinput += (i+1) + ") " + magicArray[i];
+        }
+        else{
+            newmagicinput += (i+1) + ") " + magicArray[i] + "\n";
+        }
+    }
+    document.getElementById("magic-input").value = newmagicinput;
+    console.log("Added Line Numbers!")
+}
+function shuffleLines(){
+    var magicinput = document.getElementById("magic-input").value;
+    var magicArray = magicinput.split("\n");
+    var newmagicinput = "";
+    magicArray.sort(function(a, b){return 0.5 - Math.random()});
+    for (var i = 0; i < magicArray.length; i++) {
+        if(i == magicArray.length-1){
+            newmagicinput += magicArray[i];
+        }
+        else{
+            newmagicinput += magicArray[i]+"\n";
+        }
+    }
+    document.getElementById("magic-input").value = newmagicinput;
+    console.log("Shuffled Lines!")
+}
