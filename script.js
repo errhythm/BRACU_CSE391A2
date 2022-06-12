@@ -92,23 +92,16 @@ function convert(){
 // Calculator
 
 const calculatorinput = document.getElementById("calc-value");
-calculatorinput.addEventListener("keyup", function(event) {
-    console.log(event.key)
-    if ((event.key >= 0 && event.key <= 9) || event.key == "Enter"|| event.key == "Backspace" || event.key == "v") { 
-        calc();
-    }
-});
 function calc() {
     var calcvalue = document.getElementById("calc-value").value;
+    calcvalue = calcvalue.replace(/\s+/g, '')
     calculateArray = calcvalue.split(',');
-    for (var i = 0; i < calculateArray.length; i++) {
-        calculateArray[i] = calculateArray[i].replace(/[[+-]?^0-9.]/g, '');
-    }
     calculateArray = calculateArray.filter(n => n);
     Max();
     Min();
     Sum();
     Reverse();
+    setTimeout(calc, 100);
 }
 function Max() {
     var maxvalue = Math.max.apply(null, calculateArray);
