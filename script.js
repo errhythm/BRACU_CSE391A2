@@ -194,15 +194,24 @@ function stripBlank(){
     var magicinput = document.getElementById("magic-input").value;
     var magicArray = magicinput.split("\n");
     var newmagicinput = "";
-    magicArray = magicArray.filter(item => item);
-    for (var i = 0; i < magicArray.length; i++) {
-        if(i == magicArray.length-1){
-            newmagicinput += magicArray[i];
+    var newmagicarray = []
+    // Remove the front spaces of any lines
+    magicArray.forEach((magicline) => {
+        if (magicline === ""){ 
+            return
         }
-        else{
-            newmagicinput += magicArray[i]+"\n";
-        }
-    }
+        newmagicinput += magicline.trim() + "\n";
+    })
+
+    // magicArray = magicArray.filter(item => item);
+    // for (var i = 0; i < magicArray.length; i++) {
+    //     if(i == magicArray.length-1){
+    //         newmagicinput += magicArray[i];
+    //     }
+    //     else{
+    //         newmagicinput += magicArray[i]+"\n";
+    //     }
+    // }
     document.getElementById("magic-input").value = newmagicinput;
     console.log("Stripped Blank Lines!")
 }

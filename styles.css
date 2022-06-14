@@ -165,7 +165,7 @@ nav{
     border-radius: 25px;
     border-color: #5d767b;
     border-style: solid;
-    height: 35vh;
+    height: auto;
 }
 #quote_text{
     padding-left: 10%;
